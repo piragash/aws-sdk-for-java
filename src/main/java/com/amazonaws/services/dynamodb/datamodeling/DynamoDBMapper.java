@@ -1232,6 +1232,8 @@ public class DynamoDBMapper {
         queryRequest.setHashKeyValue(queryExpression.getHashKeyValue());
         queryRequest.setScanIndexForward(queryExpression.isScanIndexForward());
         queryRequest.setRangeKeyCondition(queryExpression.getRangeKeyCondition());
+        queryRequest.setExclusiveStartKey(queryExpression.getExclusiveStartKey());
+        queryRequest.setLimit(queryExpression.getLimit());
 
         return queryRequest;
     }
